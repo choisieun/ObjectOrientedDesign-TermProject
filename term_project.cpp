@@ -334,8 +334,6 @@ PASS:
         } else if(!insert.editPage(stoi(v[0]), stoi(v[1]), v[2], page[stoi(v[0])-1])) {
           wrong_input = true;
           continue;
-        } else {
-          goto PASS;
         }
       } catch (exception e) {
         wrong_input = true;
@@ -362,8 +360,6 @@ PASS:
         } else if(!dele.editPage(stoi(v[0]), stoi(v[1]), stoi(v[2]), page[stoi(v[0])-1])) {
           wrong_input = true;
           continue;
-        } else {
-          goto PASS;
         }
       } catch (exception e) {
         wrong_input = true;
@@ -384,11 +380,10 @@ PASS:
         }
         if (v.size() != 2) {
           wrong_input = true;
+          continue;
         } else if (!change.editPage(v[0], v[1])) {
           wrong_input = true;
           continue;
-        } else {
-          goto PASS;
         }
       } catch (exception e) {
         wrong_input = true;
